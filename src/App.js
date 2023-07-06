@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Components/Header";
+import TodoList from "./Components/TodoList";
+import Footer from "./Components/Footer";
+import ReduxProvider from "./Components/ReduxProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReduxProvider>
+      <div className="h-screen flex justify-center items-center">
+        <div className="sm:max-w-[640px] border border-black p-6 rounded-lg">
+          <Header></Header>
+          <TodoList></TodoList>
+          <Footer></Footer>
+        </div>
+      </div>
+    </ReduxProvider>
   );
 }
 
